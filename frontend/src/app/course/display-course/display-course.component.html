@@ -1,0 +1,30 @@
+<div class="bootstrap-wrapper">
+  <div class="container text-center">
+    <mat-card>
+      <div class="row">
+        <div class="col">
+          <form [formGroup]="enrollCourse" (ngSubmit)="onEnroll()">
+            <mat-form-field appearance="outline">
+              <mat-label>Select Course</mat-label>
+              <mat-select
+                name="courseId"
+                id="courseId"
+                formControlName="courseId"
+              >
+                <mat-option *ngFor="let c of courseList" [value]="c.courseId">
+                  {{ c.courseName }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br />
+            <br />
+            <button mat-raised-button type="submit">Enroll</button>
+          </form>
+        </div>
+        <div class="col">
+          <button mat-raised-button (click)="startTest()">Start Test</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

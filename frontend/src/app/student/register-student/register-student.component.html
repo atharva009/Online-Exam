@@ -1,0 +1,92 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <mat-card class="text-center">
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+        <mat-form-field appearance="outline">
+          <mat-label for="studentId">ID</mat-label>
+          <input matInput required id="studentId" formControlName="studentId" />
+          <mat-hint>Unique ID</mat-hint>
+        </mat-form-field>
+
+        <br />
+        <br />
+
+        <mat-form-field appearance="outline">
+          <mat-label for="studentFirstName">First Name</mat-label>
+          <input
+            matInput
+            required
+            id="studentFirstName"
+            formControlName="studentFirstName"
+          />
+          <mat-hint>Max 10 Characters</mat-hint>
+        </mat-form-field>
+
+        <br />
+        <br />
+
+        <mat-form-field appearance="outline">
+            <mat-label for="empName">Last Name</mat-label>
+            <input
+              matInput
+              required
+              id="studentLastName"
+              formControlName="studentLastName"
+            />
+            <mat-hint>Max 10 Characters</mat-hint>
+          </mat-form-field>
+
+        <br />
+        <br />
+
+        <mat-form-field appearance="outline">
+            <mat-label for="studentEmail">Email</mat-label>
+            <input
+              matInput
+              required
+              id="studentEmail"
+              formControlName="studentEmail"
+            />
+            <mat-hint>Please enter a Valid Email</mat-hint>
+          </mat-form-field>
+
+          <br>
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label for="studentPhone">Phone</mat-label>
+            <input
+              matInput
+              required
+              id="studentPhone"
+              formControlName="studentPhone"
+            />
+            <mat-hint>Please enter a Valid Phone</mat-hint>
+          </mat-form-field>
+
+          <br>
+          <br>
+
+          <mat-form-field appearance="outline">
+            <mat-label for="studentPassword">Password</mat-label>
+            <input
+              matInput
+              required
+              id="studentPassword"
+              formControlName="studentPassword"
+            />
+            <mat-hint>Minimum 8 Characters</mat-hint>
+          </mat-form-field>
+
+          <br>
+          <br>
+          <br>
+
+        <button type="submit" mat-raised-button>
+          Register
+        </button>
+      </form>
+    </mat-card>
+  </div>
+</div>

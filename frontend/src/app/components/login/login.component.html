@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+
+<div class="container">
+    <mat-card>
+      <div>
+        <form [formGroup]="studentLoginForm" (ngSubmit)="onLogin()">
+          <mat-form-field appearance="outline">
+            <mat-label for="studentId">Student ID</mat-label>
+            <input matInput id="studentId" placeholder="Enter ID" formControlName="studentId" required />
+            <!-- <mat-error *ngIf="studentId.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+  
+          <br>
+          <br>
+  
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput id="studentPassword" placeholder="Enter Password" formControlName="studentPassword" required />
+            <!-- <mat-error *ngIf="studentId.invalid">{{getErrorMessage()}}</mat-error> -->
+          </mat-form-field>
+  
+          <br />
+          <br />
+          <br />
+
+          <button type="submit" mat-raised-button color="accent">
+            Login
+          </button>
+        </form>
+      </div>
+    </mat-card>
+  </div>
+
+    
+</div>
+  
